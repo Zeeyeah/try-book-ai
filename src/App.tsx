@@ -3,7 +3,7 @@ import './styles/nav.css'
 import './styles/section.css'
 function App() {
 
-  const [isLightTheme, setLightTheme] = useState(true)
+  const [isLightTheme, setLightTheme] = useState(false)
 
   useEffect(() => {
     if (isLightTheme) {
