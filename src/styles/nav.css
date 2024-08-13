@@ -1,0 +1,78 @@
+nav{
+  background-color: var(--secondary-bg-color);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+nav ul{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li{
+    margin: 0.5rem 1rem;
+}
+nav ul li svg{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+nav ul li svg > #sun-rays{
+  display: none;
+}
+nav ul li svg.light > #moon{
+   display: none;
+}
+nav ul li svg.light > #sun-rays{
+   display: block;
+}
+nav ul li:hover a{
+    color: var(--accent-color);
+}
+nav ul li a{
+    color: var(--text-color);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  nav ul {
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0.5rem;
+  }
+
+  nav ul li a {
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+
+  nav ul li a {
+    font-size: 0.8rem;
+  }
+}

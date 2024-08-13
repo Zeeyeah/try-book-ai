@@ -1,0 +1,115 @@
+:root {
+    /* Light mode colors */
+  --primary-color-light: #4f46e5;
+  --secondary-color-light: #818cf8; 
+  --primary-bg-color-light: #f8fafc; 
+  --secondary-bg-color-light: #e2e8f0; 
+  --primary-text-color-light: #1e293b;
+  --accent-color-light: #0ea5e9; 
+  --border-color-light: #cbd5e1; 
+
+  /* Dark mode colors */
+  --primary-color: #6366f1;
+  --secondary-color: #a5b4fc;
+  --primary-bg-color-dark: #0f172a;
+  --secondary-bg-color-dark: #1e293b;
+  --primary-text-color-dark: #e2e8f0;
+  --accent-color-dark: #22d3ee;
+  --border-color-dark: #334155;
+}
+
+/* Default to dark mode */
+body {
+    --primary-bg-color: var(--primary-bg-color-dark);
+    --secondary-bg-color: var(--secondary-bg-color-dark);
+    --text-color: var(--primary-text-color-dark);
+    --secondary-text-color: var(--secondary-text-color-dark);
+    --accent-color: var(--accent-color-dark);
+    --border-color: var(--border-color-dark);
+}
+
+/* Light mode */
+body.light {
+   --primary-bg-color: var(--primary-bg-color-light);
+    --secondary-bg-color: var(--secondary-bg-color-light);
+    --text-color: var(--primary-text-color-light);
+    --secondary-text-color: var(--secondary-text-color-light);
+    --accent-color: var(--accent-color-light);
+    --border-color: var(--border-color-light);
+}
+* {
+    -webkit-tap-highlight-color: transparent; /* Safari, UC Browser, iOS Safari */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Older versions of Chrome, UC Browser */
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0); /* Firefox */
+    tap-highlight-color: rgba(0, 0, 0, 0); /* Newer versions of Chrome and some browsers */
+}
+html,
+body {
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+section {
+  background-color: var(--secondary-bg-color);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
+}
+main{
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+h1 {
+  color: var(--secondary-color);
+  margin-top: 32px;
+  margin-bottom: 0;
+}
+h2{
+  color: var(--secondary-color);
+  margin-top: 32px;
+  margin-bottom: 0;
+  font-size: 1.17rem;
+}
+p{
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+/* Tablet (768px and above) */
+@media (max-width: 1024px) {
+
+  main {
+    padding: 0 1.5rem;
+  }
+
+  h1, h2 {
+    margin-top: 24px;
+  }
+}
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+
+  main {
+    padding: 0 1rem;
+  }
+
+  h1, h2 {
+    font-size: 1.25rem;
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}
